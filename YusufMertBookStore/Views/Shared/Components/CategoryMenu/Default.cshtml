@@ -1,0 +1,12 @@
+﻿@model IEnumerable<YusufMertBookStore.Models.Category>
+
+
+<nav class="header__menu">
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li class="active"><a asp-area="" asp-controller="Categories" asp-action="Details" asp-route-id="@item.Id">@item.Name</a></li>
+        }
+
+    </ul>
+</nav>

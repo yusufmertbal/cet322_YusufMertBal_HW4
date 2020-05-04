@@ -1,0 +1,24 @@
+﻿@model YusufMertBookStore.Models.Category
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>@Model.Name</h1>
+
+<div>
+    <dl class="row">
+        @foreach (var book in Model.Books)
+        {
+        @*<dt class="col-sm-4">
+            <h4>@book.Title</h4>
+            
+            <div class="alert-info">Satış Fiyatı: @book.Price</div>
+            <hp>@book.Authors</hp>
+        </dt>*@
+
+            @*@Html.Partial("_bookDetail",book)*@
+            <partial name="_bookDetail" model="book"></partial>
+        }
+    </dl>
+</div>
